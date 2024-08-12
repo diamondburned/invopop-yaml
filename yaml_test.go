@@ -323,6 +323,12 @@ func TestYAMLToJSON(t *testing.T) {
 			"- t: null\n",
 			`[{"t":null}]`,
 			nil,
+		}, {
+			"obj:\n" +
+				"    z_hello: hello\n" +
+				"    a_world: world\n",
+			`{"obj":{"z_hello":"hello","a_world":"world"}}`,
+			nil,
 		},
 	}
 
